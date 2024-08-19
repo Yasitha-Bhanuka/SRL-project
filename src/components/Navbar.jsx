@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import companyImg from "../assets/companyImg.png";
 
 const Navbar = () => {
   const [nav, setNave] = useState(false);
@@ -9,10 +10,16 @@ const Navbar = () => {
   };
 
   return (
-    <header className="max-w-screen-2xl container mx-auto">
-      <div className="xl:px-24 flex h-24 justify-center items-center px-4">
-        <h1 className="w-full text-3xl font-bold text-bl">SRL</h1>
-        <ul className="md:flex hidden text-bl">
+    <header className="container mx-auto max-w-screen-2xl">
+      <div className="flex items-center justify-center h-24 px-4 xl:px-24">
+        <h1 className="w-full">
+          <img
+            className="h-12 rounded-br-3xl rounded-tl-3xl"
+            src={companyImg}
+            alt="/"
+          />
+        </h1>
+        <ul className="hidden text-white md:flex">
           <li className="p-4">Home</li>
           <li className="p-4">Company</li>
           <li className="p-4">Resources</li>
@@ -29,13 +36,19 @@ const Navbar = () => {
               : "fixed left-[-100%]"
           }
         >
-          <h1 className="w-full text-3xl font-bold text-bl mt-8 m-4">SRL</h1>
-          <ul className="p-4 text-bl uppercase">
-            <li className="p-4 mt-6 border-scdblk border-b">Home</li>
-            <li className="p-4 border-scdblk border-b">Company</li>
-            <li className="p-4 border-scdblk border-b">Resources</li>
-            <li className="p-4 border-scdblk border-b">About</li>
-            <li className="p-4 border-scdblk border-b">Contact</li>
+          <h1 className="w-full m-4 mt-8">
+            <img
+              className="h-12 rounded-br-3xl rounded-tl-3xl"
+              src={companyImg}
+              alt="/"
+            />
+          </h1>
+          <ul className="p-4 text-white uppercase">
+            <li className="p-4 mt-6 border-b border-bl">Home</li>
+            <li className="p-4 border-b border-bl">Company</li>
+            <li className="p-4 border-b border-bl">Resources</li>
+            <li className="p-4 border-b border-bl">About</li>
+            <li className="p-4 border-b border-bl">Contact</li>
           </ul>
         </div>
       </div>
