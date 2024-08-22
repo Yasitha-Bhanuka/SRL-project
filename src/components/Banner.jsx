@@ -1,38 +1,46 @@
 import React from "react";
-import companyImg from "../assets/companyImg.png";
+import { useState } from "react";
 import { ReactTyped } from "react-typed";
+import Channels from "../Channels/Channels";
 
 const Banner = () => {
+  const [showChannels, setShowChannels] = useState(false);
+
+  const handleButtonClick = () => {
+    setShowChannels(!showChannels);
+  };
+
   return (
-    <div className="container px-4 mx-auto max-w-screen-2xl xl:px-24">
-      <div className="grid grid-cols-1 gap-4 py-16 lg:grid-cols-2">
-        <div className="flex flex-col justify-center px-4 item-center lg:items-end">
-          <div className="mx-auto text-3xl font-bold md:mx-0 md:text-4xl text-bl">
-            Welcome to{" "}
-            <ReactTyped
-              strings={["SRL"]}
-              typeSpeed={110}
-              backSpeed={160}
-              loop
-            />
-          </div>
-          <p className="py-4 pl-10 text-base font-medium md:text-xl lg:text-right">
-            Survay Research Lanka Pvt Ltd is a data science and analytics
+    <div className="section-container">
+      <div className="flex flex-col items-center justify-between gap-8 px-4 pt-48">
+        {/*Top */}
+        <div className="mx-auto text-4xl font-bold leading-snug md:w-3/4 space-y-7 md:leading-snug md:text-5xl text-bl">
+          Welcome to{" "}
+          <ReactTyped
+            className="text-white"
+            strings={["SRL"]}
+            typeSpeed={110}
+            backSpeed={160}
+            loop
+          />
+          <p className="my-8 text-xl font-medium text-justify text-white">
+            "Survay Research Lanka Pvt Ltd is a data science and analytics
             company based in Sri Lanka. They specialize in research projects and
             provide data solutions for industries. Their expertise in data
             science drives informed decision-making and strategic planning,
-            making them a key player in research and analytics.
+            making them a key player in research and analytics"
           </p>
-          <button className="mx-auto lg:mx-0 px-4 py-2 my-2 w-[150px] text-white font-medium rounded bg-bl">
-            Learn More
-          </button>
         </div>
-        <div className="items-center justify-start hidden pl-10 lg:flex">
-          <img
-            src={companyImg}
-            alt="banner"
-            className="object-contain rounded-br-3xl h-44 rounded-tl-3xl"
-          />
+
+        {/* Button */}
+        <div className="flex flex-col items-center justify-center px-4 md:w-1/2 space-y-7">
+          <button
+            className="px-6 py-3 font-bold text-white rounded-full bg-bl"
+            onClick={handleButtonClick}
+          >
+            Channel Streaming
+          </button>
+          <div>{showChannels && <Channels />}</div>
         </div>
       </div>
     </div>

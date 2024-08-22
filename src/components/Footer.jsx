@@ -4,26 +4,17 @@ import {
   FaLinkedinIn,
   FaTwitterSquare,
 } from "react-icons/fa";
-import companyImg from "../assets/companyImg.png";
-
 const Footer = () => {
   return (
-    <footer className="container mx-auto max-w-screen-2xl">
-      <div className="grid h-24 grid-cols-2 gap-3 px-4 xl:px-24 lg:grid-cols-4">
-        <div className="col-span-2">
-          <h1 className="">
-            <img
-              className="h-12 rounded-br-3xl rounded-tl-3xl"
-              src={companyImg}
-              alt="/"
-            />
-          </h1>
+    <div>
+      <footer className="flex flex-col gap-3 px-4 xl:px-24 md:flex-row">
+        <div className="flex-1">
+          <h1 className="px-4 text-3xl font-bold md:text-2xl">Who we are</h1>
           <p className="px-4 py-4 text-base text-justify">
-            Survay Research Lanka Pvt Ltd is a data science and analytics
-            company based in Sri Lanka. They specialize in research projects and
-            provide data solutions for industries. Their expertise in data
-            science drives informed decision-making and strategic planning,
-            making them a key player in research and analytics.
+            Survey Research Lanka (Private) Limited was established on the 28th
+            of September 1989, fulfilling a long-felt need for a totally
+            independent, full service Marketing, Opinion and Social Research
+            Consultancy in Sri Lanka.
           </p>
           <div className="flex justify-center gap-5 my-2 lg:my-6 md:justify-center">
             <FaFacebookSquare size={30} className="mr-2" />
@@ -32,8 +23,8 @@ const Footer = () => {
             <FaLinkedinIn size={30} className="mr-2" />
           </div>
         </div>
-        <div className="col-span-1 mt-4 ml-14 lg:col-span-1">
-          <div className="ml-16 lg:ml-0">
+        <div className="flex flex-row justify-around flex-1">
+          <div className="">
             <h6 className="font-medium">Services</h6>
             <ul className="">
               <li className="p-3">Researches</li>
@@ -42,9 +33,7 @@ const Footer = () => {
               <li className="p-3">Project Management</li>
             </ul>
           </div>
-        </div>
-        <div className="col-span-1 mt-4 ml-14 lg:col-span-1">
-          <div className="ml-16 lg:ml-0">
+          <div className="">
             <h6 className="font-medium">Company</h6>
             <ul className="">
               <li className="p-3">About</li>
@@ -54,8 +43,8 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
   );
 };
 

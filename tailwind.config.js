@@ -4,10 +4,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        "white": "#EEEEEE",
-        "bl": "#00ADB5",
-        "scdblk": "#393E46",
-        "blk": "#222831",
+        white: "#EEEEEE",
+        bl: "#00ADB5",
+        scdblk: "#393E46",
+        blk: "#222831",
       },
     },
   },

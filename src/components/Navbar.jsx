@@ -1,17 +1,42 @@
 import { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import companyImg from "../assets/companyImg.png";
+import { useEffect } from "react";
 
 const Navbar = () => {
   const [nav, setNave] = useState(false);
-
   const handleNav = () => {
     setNave(!nav);
   };
 
+  const [isSticky, setSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      if (offset > 0) {
+        setSticky(true);
+      } else {
+        setSticky(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <header className="container mx-auto max-w-screen-2xl">
-      <div className="flex items-center justify-center h-24 px-4 xl:px-24">
+    <header className="container fixed top-0 left-0 right-0 mx-auto max-w-screen-2xl">
+      <div
+        className={`flex bg-blk items-center justify-center h-24 px-4 xl:px-24 ${
+          isSticky
+            ? "md:shadow-2xl bg-base-100 transition-all duration-300 ease-in-out"
+            : ""
+        } `}
+      >
         <h1 className="w-full">
           <img
             className="h-12 rounded-br-3xl rounded-tl-3xl"
