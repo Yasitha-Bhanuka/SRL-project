@@ -45,7 +45,9 @@ const Navbar = () => {
           />
         </h1>
         <ul className="hidden text-white md:flex">
-          <li className="p-4">Home</li>
+          <li className="p-4">
+            <a href="/">Home</a>
+          </li>
           <li className="p-4">Company</li>
           <li className="p-4">Resources</li>
           <li className="p-4">About</li>
@@ -69,7 +71,9 @@ const Navbar = () => {
             />
           </h1>
           <ul className="p-4 text-white uppercase">
-            <li className="p-4 mt-6 border-b border-bl">Home</li>
+            <li className="p-4 mt-6 border-b border-bl">
+              <a href="/">Home</a>
+            </li>
             <li className="p-4 border-b border-bl">Company</li>
             <li className="p-4 border-b border-bl">Resources</li>
             <li className="p-4 border-b border-bl">About</li>

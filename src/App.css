@@ -1,3 +1,34 @@
 .section-container {
   @apply container px-4 mx-auto xl:px-24 max-w-screen-2xl;
 }
+
+.channel-button {
+  display: inline-block;
+  /* Ensures the link behaves like a button */
+  padding: 12px 24px;
+  /* py-3 and px-6 combined */
+  font-weight: bold;
+  /* font-bold */
+  color: white;
+  /* text-white */
+  border-radius: 9999px;
+  /* rounded-full */
+  text-decoration: none;
+  /* Remove underline */
+  transition: background-color 0.3s, transform 0.3s;
+  /* Smooth transition for color and size */
+}
+
+.channel-button:hover {
+  transform: scale(1.05);
+  /* Slightly increase size on hover */
+  background-color: rgba(255, 255, 255, 0.2);
+  /* Optional: Change background color on hover */
+}
+
+.channel-button:active {
+  transform: scale(0.95);
+  /* Slightly decrease size on click */
+  background-color: rgba(255, 255, 255, 0.4);
+  /* Optional: Change background color on click */
+}

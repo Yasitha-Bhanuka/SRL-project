@@ -1,15 +1,7 @@
 import React from "react";
-import { useState } from "react";
+import { Outlet } from "react-router-dom";
 import { ReactTyped } from "react-typed";
-import Channels from "../Channels/Channels";
-
 const Banner = () => {
-  const [showChannels, setShowChannels] = useState(false);
-
-  const handleButtonClick = () => {
-    setShowChannels(!showChannels);
-  };
-
   return (
     <div className="section-container">
       <div className="flex flex-col items-center justify-between gap-8 px-4 pt-48">
@@ -34,13 +26,9 @@ const Banner = () => {
 
         {/* Button */}
         <div className="flex flex-col items-center justify-center px-4 md:w-1/2 space-y-7">
-          <button
-            className="px-6 py-3 font-bold text-white rounded-full bg-bl"
-            onClick={handleButtonClick}
-          >
-            Channel Streaming
+          <button className="px-6 py-3 font-bold text-white rounded-full bg-bl ">
+            <a href="/channelview">Channel Streaming</a>
           </button>
-          <div>{showChannels && <Channels />}</div>
         </div>
       </div>
     </div>
