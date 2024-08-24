@@ -7,7 +7,7 @@ import {
 const Footer = () => {
   return (
     <div>
-      <footer className="flex flex-col gap-3 px-4 py-8 xl:px-24 md:flex-row">
+      <footer className="flex flex-col gap-3 py-8 section-container md:flex-row">
         <div className="flex-1">
           <h1 className="px-4 text-3xl font-bold md:text-2xl">Who we are</h1>
           <p className="px-4 py-4 text-base text-justify">
@@ -23,7 +23,7 @@ const Footer = () => {
             <FaLinkedinIn size={30} className="mr-2" />
           </div>
         </div>
-        <div className="flex flex-row justify-around flex-1">
+        <div className="flex flex-row justify-around flex-1 md:pt-2">
           <div className="">
             <h6 className="font-medium">Services</h6>
             <ul className="">

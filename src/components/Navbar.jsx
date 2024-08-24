@@ -29,7 +29,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header className="container fixed top-0 left-0 right-0 mx-auto max-w-screen-2xl">
+    <header className="container fixed top-0 left-0 right-0 z-10 mx-auto max-w-screen-2xl">
       <div
         className={`flex bg-blk items-center justify-center h-24 px-4 xl:px-24 ${
           isSticky
@@ -48,10 +48,18 @@ const Navbar = () => {
           <li className="p-4">
             <a href="/">Home</a>
           </li>
-          <li className="p-4">Company</li>
-          <li className="p-4">Resources</li>
-          <li className="p-4">About</li>
-          <li className="p-4">Contact</li>
+          <li className="p-4">
+            <a href="/">Company</a>
+          </li>
+          <li className="p-4">
+            <a href="/">Resources</a>
+          </li>
+          <li className="p-4">
+            <a href="/">About</a>
+          </li>
+          <li className="p-4">
+            <a href="/">Contact</a>
+          </li>
         </ul>
         <div onClick={handleNav} className="block md:hidden">
           {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
@@ -74,10 +82,18 @@ const Navbar = () => {
             <li className="p-4 mt-6 border-b border-bl">
               <a href="/">Home</a>
             </li>
-            <li className="p-4 border-b border-bl">Company</li>
-            <li className="p-4 border-b border-bl">Resources</li>
-            <li className="p-4 border-b border-bl">About</li>
-            <li className="p-4 border-b border-bl">Contact</li>
+            <li className="p-4 border-b border-bl">
+              <a href="/">Company</a>
+            </li>
+            <li className="p-4 border-b border-bl">
+              <a href="/">Resources</a>
+            </li>
+            <li className="p-4 border-b border-bl">
+              <a href="/">About</a>
+            </li>
+            <li className="p-4 border-b border-bl">
+              <a href="/">Contact</a>
+            </li>
           </ul>
         </div>
       </div>
