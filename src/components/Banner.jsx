@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 import { ReactTyped } from "react-typed";
 const Banner = () => {
@@ -29,7 +30,7 @@ const Banner = () => {
         {/* Button */}
         <div className="flex flex-col items-center justify-center px-4 md:w-1/2 space-y-7">
           <button className="px-6 py-3 font-bold text-white rounded-full bg-bl ">
-            <a href="/channelview">Channel Streaming</a>
+            <Link to={"/channelview"}>Channel Streaming</Link>
           </button>
         </div>
       </div>
