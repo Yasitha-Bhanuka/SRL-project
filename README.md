@@ -1,12 +1,12 @@
 ### Project Overview 🚀
 
-Welcome to the **Survey Research Lanka Pvt Ltd** frontend project! This project is a modern web application designed to showcase the capabilities of Survey Research Lanka Pvt Ltd, a data science and analytics company based in Sri Lanka. The application provides detailed information about the company's services, expertise, and projects.
+Welcome to the **Survey Research Lanka Pvt Ltd** frontend project! This project is a modern web application designed to showcase the capabilities of Survey Research Lanka Pvt Ltd, a data science and analytics company based in Sri Lanka. The application provides detailed information about the company's services, expertise, and projects. Live site on this link -: 🌀 https://srlvideostreaming.netlify.app/
 
 ### Technologies and Libraries Used 🛠️
 
 This project leverages a variety of modern technologies and libraries to deliver a seamless and responsive user experience. Below is a list of the key technologies and libraries used:
 
-- **React**: A JavaScript library for building user interfaces.
+- **React**: A JavaScript library for building user interfaces
 - **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
 - **React Router Dom**: A collection of navigational components that compose declaratively with application.
 - **React Typed**: A React component for creating a typing animation effect..
